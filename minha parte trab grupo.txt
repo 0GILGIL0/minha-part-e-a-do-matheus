@@ -1,0 +1,27 @@
+//////////////////////////////////////////////////////////////////////////////
+qual a equipe com a maior taxa de vitórias acumuladas?
+
+USE db_sistema;
+select DISTINCT Team,G,W,L from ranking
+order by W_PCT DESC
+LIMIT 5
+//////////////////////////////////////////////////////////////////////////////
+As 5 arenas com maior capacidade?
+
+select DISTINCT Nickname,city,arena,arenaCapacity from teams
+order by arenaCapacity desC
+LIMIT 5
+
+//////////////////////////////////////////////////////////////////////////////
+quais os times que tem a menor quantidade de derotas?
+USE db_sistema;
+select DISTINCT Team,L from ranking
+order by W_PCT DESC
+LIMIT 5
+
+//////////////////////////////////////////////////////////////////////////////
+quais times nao posuem estadios ?
+USE db_sistema;
+select DISTINCT Nickname,Arena,ArenaCapacity from teams
+order by ArenaCapacity 
+LIMIT 5
